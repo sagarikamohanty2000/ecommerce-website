@@ -1,0 +1,19 @@
+.btn{
+    background-color: black;
+    border-color: rgb(0, 119, 255);
+    color: white;
+    margin-top: 10px;
+    width:50px;
+    border-radius: 5px;
+}
+.cartFrame{
+   display: inline-flex;
+   position: absolute;
+   left:90rem;
+}
+.badge{
+    margin-bottom: 2px;
+ color:rgb(0, 119, 255);
+ margin-left:5px;
+ font-size: larger;
+}

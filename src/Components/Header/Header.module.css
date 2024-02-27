@@ -1,0 +1,39 @@
+.header{
+    background-color: black;
+    color: white;
+    width:100%;
+    height:42px;
+    display: flex;
+}
+
+.unorderList{
+  margin-left:550px;
+  padding-top:5px;
+}
+
+ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+li{
+    margin-right:90px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+.header-second{
+    background-color:grey;
+    width:100%;
+    height:180px;
+    margin-top: 2px;
+    color: white;
+}
+
+.header-second h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    font-weight: 600;
+    padding-left: 460px;
+}
+
