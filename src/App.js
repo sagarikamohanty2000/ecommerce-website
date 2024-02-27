@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './Components/Header/Header';
+import StoreList from'./Components/Store/StoreList';
 
 function App() {
   return (
    <>
-   <Header>
-   </Header>
+   <Header/>
+   <StoreList></StoreList>
    </>
   );
 }
