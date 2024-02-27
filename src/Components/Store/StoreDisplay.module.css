@@ -1,0 +1,28 @@
+.storeFrame{
+margin-top: 100px;
+}
+
+.image{
+    height:200px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: center;
+
+}
+
+.image img{
+    width: 250px;
+}
+
+.title{
+    font-size: 30px;
+    display:flex;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.price{
+    margin-right: 190px;
+    display: flex;
+    justify-content: center;
+}
