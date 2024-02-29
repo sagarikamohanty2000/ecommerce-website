@@ -1,0 +1,59 @@
+.cartFrame {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 600px;
+  position: fixed;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  top: 50px;
+  left: 1118px;
+  border: 1px solid black;
+}
+.cartFrame h2 {
+  text-align: center;
+}
+
+.cartHeader {
+  color: black;
+  font-size: 25px;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.item {
+  margin-right: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.price {
+  margin-right: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.qty {
+  border-bottom: 2px solid black;
+}
+
+.totalAmt {
+    font-size: 25px;
+    margin-left: 11rem;
+}
+
+.purchaseBtn {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(74, 161, 238, 0.608);
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cancelBtn{
+ background-color: white;
+ border-radius: 4px;
+ margin-left: 19rem;
+}

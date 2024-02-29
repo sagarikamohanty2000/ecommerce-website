@@ -12,8 +12,10 @@ const StoreDisplay = (props) => {
             <div className={classes.image}>
               <img src={props.prod.imageUrl}></img>
             </div>
-            
+            <div className={classes['price-btn']}>
             <div className={classes.price}> ${props.prod.price}</div>
+            <button className={classes.btn}>Add to Cart</button>
+            </div>
           </div>
         </Col>
   );
