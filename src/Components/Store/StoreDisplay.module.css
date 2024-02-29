@@ -1,5 +1,6 @@
 .storeFrame{
 margin-top: 100px;
+margin-bottom:40px;
 }
 
 .image{
@@ -22,7 +23,21 @@ margin-top: 100px;
 }
 
 .price{
-    margin-right: 190px;
-    display: flex;
-    justify-content: center;
+    margin-right: 100px;
+    margin-left: 200px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.price-btn{
+    display: inline-flex;
+}
+
+.btn{
+    background-color: rgb(182, 211, 255);
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding:6px;
 }
