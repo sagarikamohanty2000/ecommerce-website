@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import ContextApi from '../../Store/ContextApi';
 import classes from './Cart.module.css';
 
 const Cart = (props) => {
+ const contextApi = useContext(ContextApi);
 
+ const cartItem = contextApi.items.reduce((curValue, item) => {
+   return curValue + Number(item.qty)
+ },0); 
    const onClickHandler = () => {
       props.cartBtn(true);
    }
@@ -12,7 +17,7 @@ const Cart = (props) => {
          cart
      </button>
      <div className={classes.badge}>
-        0
+        {cartItem}
      </div>
     </div>
  )

@@ -6,7 +6,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const StoreList = () => {
   const productsArr = [
-    {
+    { 
+      id:1,
       title: "Album 1",
 
       price: 100,
@@ -16,6 +17,7 @@ const StoreList = () => {
     },
 
     {
+      id:2,
       title: "Album 2",
 
       price: 50,
@@ -25,6 +27,7 @@ const StoreList = () => {
     },
 
     {
+      id:3,
       title: "Album 3",
 
       price: 70,
@@ -34,6 +37,7 @@ const StoreList = () => {
     },
 
     {
+      id:4,
       title: "Album 4",
 
       price: 100,
@@ -49,7 +53,7 @@ const StoreList = () => {
       <Container>
         <Row>
           {productsArr.map((product) => (
-            <StoreDisplay prod={product}></StoreDisplay>
+            <StoreDisplay prod={product} key={product.id}></StoreDisplay>
           ))}
         </Row>
       </Container>
