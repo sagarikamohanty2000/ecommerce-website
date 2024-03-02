@@ -1,15 +1,24 @@
-import React from "react";
+import React,{useContext} from "react";
 import ReactDOM from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import CartList from "./CartList";
+import ContextApi from "../../Store/ContextApi";
 import classes from "./CartModel.module.css";
 
-const CartModel = () => {
+const CartModel = (props) => {
+
+    const contextApi = useContext(ContextApi);
+    const amount = contextApi.totalAmount;
+
+    const onClickHandle = ()=>{
+      props.handleCartBtn(false);
+    }
+
   const CartFrame = () => {
     return (
       <Container>
         <div className={classes.cartFrame}>
-          <button className={classes.cancelBtn}>X</button>
+          <button className={classes.cancelBtn} onClick = {onClickHandle}>X</button>
           <h2>CART</h2>
 
           <div className={classes.cartHeader}>
@@ -28,7 +37,7 @@ const CartModel = () => {
           <CartList/>
 
           <div className={classes.totalAmt}>
-            <span>Total : 0 </span>
+            <span>Total : {amount} </span>
           </div>
           <button className={classes.purchaseBtn}>Purchase</button>
         </div>

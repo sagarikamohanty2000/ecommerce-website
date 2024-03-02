@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import StoreList from'./Components/Store/StoreList';
 import Footer from './Components/Footer/Footer';
 import CartModel from './Components/Cart/CartModel';
+import ContextProvider from './Store/ContextProvider';
 
 function App() {
 
@@ -13,12 +14,12 @@ function App() {
   setCartBtn(cartFlag);
   }
   return (
-   <>
-   {cartBtn && <CartModel/>}
+   <ContextProvider>
+   {cartBtn && <CartModel handleCartBtn={cartBtnHandler}/>}
    <Header handleCartBtn={cartBtnHandler} />
    <StoreList></StoreList>
    <Footer></Footer>
-   </>
+   </ContextProvider>
   );
 }
 
