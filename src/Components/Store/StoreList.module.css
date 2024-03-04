@@ -1,7 +1,7 @@
-.title{
-    display:flex;
-    justify-content: center;
-    font-family:"Times New Roman", Times, serif;
-    margin-top: 3rem;
-    font-size: 50px;
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 3rem;
+  font-size: 50px;
 }

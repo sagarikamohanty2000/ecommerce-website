@@ -1,43 +1,42 @@
-.storeFrame{
-margin-top: 100px;
-margin-bottom:40px;
+.storeFrame {
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
-.image{
-    height:200px;
-    margin-bottom: 20px;
-    display:flex;
-    justify-content: center;
-
+.image {
+  height: 200px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.image img{
-    width: 250px;
+.image img {
+  width: 250px;
 }
 
-.title{
-    font-size: 30px;
-    display:flex;
-    justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+.title {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.price{
-    margin-right: 100px;
-    margin-left: 200px;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.price {
+  margin-right: 100px;
+  margin-left: 200px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.price-btn{
-    display: inline-flex;
+.price-btn {
+  display: inline-flex;
 }
 
-.btn{
-    background-color: rgb(182, 211, 255);
-    border-radius: 6px;
-    color: white;
-    font-weight: 700;
-    border: none;
-    padding:6px;
+.btn {
+  background-color: rgb(182, 211, 255);
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 6px;
 }

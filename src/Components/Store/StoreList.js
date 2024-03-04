@@ -1,13 +1,13 @@
 import React from "react";
 import StoreDisplay from "./StoreDisplay";
-import classes from './StoreList.module.css';
+import classes from "./StoreList.module.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 
 const StoreList = () => {
   const productsArr = [
-    { 
-      id:1,
+    {
+      id: 1,
       title: "Album 1",
 
       price: 100,
@@ -17,7 +17,7 @@ const StoreList = () => {
     },
 
     {
-      id:2,
+      id: 2,
       title: "Album 2",
 
       price: 50,
@@ -27,7 +27,7 @@ const StoreList = () => {
     },
 
     {
-      id:3,
+      id: 3,
       title: "Album 3",
 
       price: 70,
@@ -37,7 +37,7 @@ const StoreList = () => {
     },
 
     {
-      id:4,
+      id: 4,
       title: "Album 4",
 
       price: 100,
@@ -49,7 +49,7 @@ const StoreList = () => {
 
   return (
     <>
-    <h3 className={classes.title}>MUSIC</h3>
+      <h3 className={classes.title}>MUSIC</h3>
       <Container>
         <Row>
           {productsArr.map((product) => (
