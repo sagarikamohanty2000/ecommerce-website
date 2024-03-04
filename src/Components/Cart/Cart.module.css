@@ -1,6 +1,6 @@
 .btn {
   background-color: black;
-  border-color: rgb(0, 119, 255);
+  border-color: rgb(87, 165, 255);
   color: white;
   margin-top: 10px;
   width: 50px;
@@ -13,7 +13,7 @@
 }
 .badge {
   margin-bottom: 2px;
-  color: rgb(0, 119, 255);
+  color: rgb(87, 165, 255);
   margin-left: 5px;
   font-size: larger;
 }

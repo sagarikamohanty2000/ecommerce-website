@@ -1,0 +1,40 @@
+.tourContent{
+    max-width: 900px;
+    margin: 30px auto;
+}
+.tourList{
+    font-size: 17px;
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 2rem;
+}
+.date{
+     margin: 1rem;
+     
+}
+.location{
+    position: absolute;
+    left: 500px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.event{
+    position: absolute;
+    left : 700px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+.buyBtn{
+    position: absolute;
+    left : 950px;
+    color: white;
+    background-color: rgb(87, 165, 255); 
+    border: none;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
