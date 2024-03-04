@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ContextApi from "../../Store/ContextApi";
-import classes from './CartList.module.css';
+import classes from "./CartList.module.css";
 
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -23,7 +23,9 @@ const CartList = () => {
                 </Col>
                 <Col>{cart.price}</Col>
                 <Col>{cart.qty}</Col>
-                <Col><button className={classes.removeBtn}>Remove</button></Col>
+                <Col>
+                  <button className={classes.removeBtn}>Remove</button>
+                </Col>
               </Row>
             </Container>
           )
