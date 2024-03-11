@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
+import ContactUs from "./Components/Pages/ContactUs";
 import Home from "./Components/Pages/Home";
 import About from "./Components/Pages/About";
 import Footer from "./Components/Footer/Footer";
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/store", element: <Header /> },
       { path: "/about", element: <About /> },
+      {path: "/contactUs", element:<ContactUs/>}
     ],
   },
 ]);

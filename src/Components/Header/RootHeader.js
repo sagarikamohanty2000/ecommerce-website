@@ -25,6 +25,9 @@ const RootHeader = (props) => {
           <li>
             <Link to="/about"> ABOUT </Link>
           </li>
+          <li>
+            <Link to="/contactUs">Contact Us</Link>
+          </li>
         </ul>
         <Cart cartBtn={cartBtnHandler}></Cart>
       </div>
