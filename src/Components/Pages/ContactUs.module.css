@@ -1,0 +1,80 @@
+.header-second {
+  background-color: grey;
+  width: 100%;
+  height: 180px;
+  margin-top: 2px;
+  color: white;
+}
+
+.header-second h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 100px;
+  font-weight: 600;
+  padding-left: 460px;
+}
+
+.formModule {
+  margin: 1rem auto;
+  height: 400px;
+  width: 90%;
+  max-width: 40rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.nameFrame {
+  font-size: 20px;
+  margin-right: 10rem;
+  font-weight: bold;
+}
+
+.inputName input {
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 90%;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.emailFrame {
+  font-size: 20px;
+  margin-right: 10rem;
+  font-weight: bold;
+}
+
+.inputEmail input {
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 90%;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.phFrame {
+  font-size: 20px;
+  margin-right: 10rem;
+  font-weight: bold;
+}
+
+.inputPh input {
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 90%;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.btnAdd button {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: rgb(87, 165, 255);
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 6px;
+}
