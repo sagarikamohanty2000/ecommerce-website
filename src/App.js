@@ -6,6 +6,7 @@ import Home from "./Components/Pages/Home";
 import About from "./Components/Pages/About";
 import Footer from "./Components/Footer/Footer";
 import ContextProvider from "./Store/ContextProvider";
+import StoreProductDetails from "./Components/Store/StoreProductDetails";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navigation from "./Components/Pages/Navigation";
 
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/store", element: <Header /> },
       { path: "/about", element: <About /> },
-      {path: "/contactUs", element:<ContactUs/>}
+      {path: "/contactUs", element:<ContactUs/>},
+      {path: "/products/:productId", element:<StoreProductDetails/>}
     ],
   },
 ]);

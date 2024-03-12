@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import ContextApi from "../../Store/ContextApi";
 import classes from "./StoreDisplay.module.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -21,7 +22,9 @@ const StoreDisplay = (props) => {
     <Col xs={6}>
       <div className={classes.storeFrame}>
         <div className={classes.title}>
-          <h3>{props.prod.title}</h3>
+          <Link to="/products/p1">
+            <h3>{props.prod.title}</h3>
+          </Link>
         </div>
         <div className={classes.image}>
           <img src={props.prod.imageUrl}></img>
