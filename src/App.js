@@ -4,32 +4,39 @@ import Header from "./Components/Header/Header";
 import ContactUs from "./Components/Pages/ContactUs";
 import Home from "./Components/Pages/Home";
 import About from "./Components/Pages/About";
+import AuthForm from "./Components/Auth/AuthForm";
 import Footer from "./Components/Footer/Footer";
-import ContextProvider from "./Store/ContextProvider";
 import StoreProductDetails from "./Components/Store/StoreProductDetails";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navigation from "./Components/Pages/Navigation";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigation />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/store", element: <Header /> },
-      { path: "/about", element: <About /> },
-      {path: "/contactUs", element:<ContactUs/>},
-      {path: "/products/:productId", element:<StoreProductDetails/>}
-    ],
-  },
-]);
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <ContextProvider>
-      <RouterProvider router={router}></RouterProvider>
+    <>
+      <Navigation>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/store">
+            <Header />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contactUs">
+            <ContactUs />
+          </Route>
+          <Route path="/products/:productId">
+            <StoreProductDetails />
+          </Route>
+          <Route path="/login">
+            <AuthForm />
+          </Route>
+        </Switch>
+      </Navigation>
       <Footer></Footer>
-    </ContextProvider>
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import ContextApi from "./ContextApi";
 
 const defaultCartItem = {
@@ -46,6 +46,9 @@ const ContextProvider = (prop) => {
     defaultCartItem
   );
 
+  const prevToken = localStorage.getItem('token');
+  const[token, setToken] = useState(prevToken);
+
   const removeCartItem = (id) => {
     dispatchStateItem({
       Type: "Remove",
@@ -55,11 +58,31 @@ const ContextProvider = (prop) => {
   const addCartItem = (item) => {
     dispatchStateItem({ Type: "Add", item: item });
   };
+
+  const isLogIn = !!token;
+
+  const loginHandler = (token)=>{
+    setToken(token);
+    localStorage.setItem('token', token);
+    setTimeout(() => {
+      setToken('');
+      localStorage.removeItem('token');
+    }, 50000);
+  }
+
+  const logoutHandler = () => {
+    setToken('');
+    localStorage.removeItem('token');
+  }
   const ApiContext = {
     items: stateItem.items,
     totalAmount: stateItem.totalAmount,
     addItem: addCartItem,
     removeItem: removeCartItem,
+    token:token,
+    isLoggedIn: isLogIn,
+    login:loginHandler,
+    logout:logoutHandler
   };
 
   return (
