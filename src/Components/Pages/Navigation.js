@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom";
 import RootHeader from "../Header/RootHeader";
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
     <>
       <RootHeader></RootHeader>
-      <Outlet />
+    <main>{props.children}</main>
     </>
   );
 };
