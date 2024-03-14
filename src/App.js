@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import AuthContext from "./Store/ContextApi";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import ContactUs from "./Components/Pages/ContactUs";
@@ -8,9 +9,10 @@ import AuthForm from "./Components/Auth/AuthForm";
 import Footer from "./Components/Footer/Footer";
 import StoreProductDetails from "./Components/Store/StoreProductDetails";
 import Navigation from "./Components/Pages/Navigation";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
+  const authContext = useContext(AuthContext);
   return (
     <>
       <Navigation>
@@ -18,9 +20,11 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/store">
-            <Header />
-          </Route>
+          {authContext.isLoggedIn && (
+            <Route path="/store">
+              <Header />
+            </Route>
+          )}
           <Route path="/about">
             <About />
           </Route>
@@ -30,9 +34,14 @@ function App() {
           <Route path="/products/:productId">
             <StoreProductDetails />
           </Route>
-          <Route path="/login">
-            <AuthForm />
-          </Route>
+          {!authContext.isLoggedIn && (
+            <Route path="/login">
+              <AuthForm />
+            </Route>
+          )}
+          <Route path="*">
+          <Redirect to="/login"></Redirect>
+        </Route>
         </Switch>
       </Navigation>
       <Footer></Footer>

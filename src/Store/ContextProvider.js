@@ -67,7 +67,7 @@ const ContextProvider = (prop) => {
     setTimeout(() => {
       setToken('');
       localStorage.removeItem('token');
-    }, 50000);
+    }, 5000);
   }
 
   const logoutHandler = () => {
