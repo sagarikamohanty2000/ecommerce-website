@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import ContextApi from "../../Store/ContextApi";
 import CartModel from "../Cart/CartModel";
 import Cart from "../Cart/Cart";
 import classes from "./RootHeader.module.css";
 
 const RootHeader = (props) => {
   const [cartBtn, setCartBtn] = useState(false);
+  const authcontext = useContext(ContextApi);
 
   const cartBtnHandler = (cartFlag) => {
     setCartBtn(cartFlag);
@@ -19,20 +21,24 @@ const RootHeader = (props) => {
           <li>
             <Link to="/"> HOME </Link>
           </li>
-          <li>
-            <Link to="/store"> STORE </Link>
-          </li>
+          {authcontext.isLoggedIn && (
+            <li>
+              <Link to="/store"> STORE </Link>
+            </li>
+          )}
           <li>
             <Link to="/about"> ABOUT </Link>
           </li>
           <li>
             <Link to="/contactUs">CONTACT US</Link>
           </li>
-          <li>
-            <Link to="/login">LOGIN</Link>
-          </li>
+          {!authcontext.isLoggedIn && (
+            <li>
+              <Link to="/login">LOGIN</Link>
+            </li>
+          )}
         </ul>
-        <Cart cartBtn={cartBtnHandler}></Cart>
+        {authcontext.isLoggedIn && <Cart cartBtn={cartBtnHandler}></Cart>}
       </div>
     </>
   );
