@@ -7,8 +7,9 @@ const ContextApi = React.createContext({
   removeItem: (id) => {},
   token:'',
   isLoggedIn:false,
-  login: (token)=> {},
-  logout: ()=> {}
+  login: (token, emailId)=> {},
+  logout: ()=> {},
+  email:''
 });
 
 export default ContextApi;
