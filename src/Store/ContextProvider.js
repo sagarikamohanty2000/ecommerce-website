@@ -48,6 +48,7 @@ const ContextProvider = (prop) => {
 
   const prevToken = localStorage.getItem('token');
   const[token, setToken] = useState(prevToken);
+  const [email, setEmail] = useState('');
 
   const removeCartItem = (id) => {
     dispatchStateItem({
@@ -61,13 +62,14 @@ const ContextProvider = (prop) => {
 
   const isLogIn = !!token;
 
-  const loginHandler = (token)=>{
+  const loginHandler = (token, emailId)=>{
     setToken(token);
+    setEmail(emailId);
     localStorage.setItem('token', token);
     setTimeout(() => {
       setToken('');
       localStorage.removeItem('token');
-    }, 5000);
+    }, 100000);
   }
 
   const logoutHandler = () => {
@@ -82,7 +84,8 @@ const ContextProvider = (prop) => {
     token:token,
     isLoggedIn: isLogIn,
     login:loginHandler,
-    logout:logoutHandler
+    logout:logoutHandler,
+    email: email
   };
 
   return (

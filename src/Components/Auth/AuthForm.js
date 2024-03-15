@@ -1,8 +1,8 @@
-import React, {useContext,useState} from "react";
-import {useHistory} from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import ContextApi from "../../Store/ContextApi";
 
-import classes from './AuthForm.module.css';
+import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
@@ -21,9 +21,8 @@ const AuthForm = () => {
 
   async function onFormSubmitHandler(event) {
     event.preventDefault();
-
-    setEmail("");
-    setPswd("");
+    const updatedEmail = authContext.email.replace("@","");
+    const finalEmail = updatedEmail.replace(".","");
 
     try {
       const response = await fetch(
@@ -37,14 +36,19 @@ const AuthForm = () => {
           }),
         }
       );
+      const response2 = await fetch(`https://crudcrud.com/api/a208c057a0cc4ed59662e63c95a65a36/cart${finalEmail}`, {
+        method: 'GET'
+      })
       const data = await response.json();
       if (!response.ok) {
         throw new Error("Authentication Faild");
       } else {
-        authContext.login(data.idToken);
-        history.replace('/store')
+        authContext.login(data.idToken, email);
+        history.replace("/store");
         console.log(data);
       }
+      setEmail("");
+      setPswd("");
     } catch (error) {
       alert(error.message);
     }
